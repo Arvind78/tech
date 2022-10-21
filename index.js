@@ -25,17 +25,19 @@ mongoose.connect(process.env.dbUrl).then(() => console.log(`dataBase connection 
 router1.post("/push", (req, res) => {
     GithubActions.create(req.body)
     console.log(req.body)
-
+    res.status(200).json("complrted")
 })
 
 router2.post("/margePR",(req, res) => {
     GithubActions.create(req.body)
     console.log(req.body)
+    res.status(200).json("complrted")
 })
 
 router3.post("/pull", (req, res) => {
     GithubActions.create(req.body)
     console.log(req.body)
+    res.status(200).json("complrted")
 })
 
 router4.get("/data", async(req, res) => {
